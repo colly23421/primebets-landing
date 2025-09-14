@@ -1,1 +1,5 @@
-
+{
+  "version": 2,
+  "name": "primebets-landing",  
+  "regions": ["waw1"]
+}
