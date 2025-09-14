@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PrimeBets - Zakłady Sportowe Online | Najlepsze Kursy</title>
-    <meta name="description" content="PrimeBets - Profesjonalne zakłady sportowe online. Najlepsze kursy, bonusy powitalne i transmisje na żywo. Dołącz już dziś!">
-    
+    <title>PrimeBets - Dostęp do Grupy VIP Analityków Sportowych</title>
+    <meta name="description" content="Zdobądź bezpłatny dostęp na 30 dni do ekskluzywnej grupy VIP analityków sportowych. Odbierz dostęp do prognoz i narzędzi, które pomogą Ci wejść na wyższy poziom.">
+
     <style>
         * {
             margin: 0;
@@ -14,9 +14,9 @@
         }
 
         :root {
-            --primary: #6366f1;
-            --primary-dark: #4f46e5;
-            --secondary: #f59e0b;
+            --primary: #47CC02;
+            --primary-dark: #658C11;
+            --secondary: #84F235;
             --dark: #0f172a;
             --light: #f8fafc;
             --gray: #64748b;
@@ -28,6 +28,7 @@
             line-height: 1.6;
             color: var(--dark);
             overflow-x: hidden;
+            background-color: var(--light);
         }
 
         /* Navigation */
@@ -35,11 +36,11 @@
             position: fixed;
             top: 0;
             width: 100%;
-            background: rgba(15, 23, 42, 0.95);
-            backdrop-filter: blur(10px);
+            background: var(--dark);
             z-index: 1000;
             padding: 1rem 0;
             transition: all 0.3s ease;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         .nav-container {
@@ -52,19 +53,14 @@
         }
 
         .logo {
-            font-size: 1.8rem;
-            font-weight: bold;
-            color: var(--light);
             text-decoration: none;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
         }
 
-        .logo span {
-            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        .logo img {
+            height: 120px;
+            width: auto;
         }
 
         .nav-links {
@@ -77,6 +73,7 @@
             color: var(--light);
             text-decoration: none;
             transition: color 0.3s ease;
+            font-weight: 500;
         }
 
         .nav-links a:hover {
@@ -90,22 +87,24 @@
             border-radius: 50px;
             text-decoration: none;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
+            font-weight: 600;
         }
 
         .nav-btn:hover {
             transform: translateY(-2px);
-            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+            box-shadow: 0 10px 20px rgba(71, 204, 2, 0.3);
         }
 
         /* Hero Section */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
             display: flex;
             align-items: center;
             justify-content: center;
             position: relative;
             padding: 6rem 2rem 2rem;
+            overflow: hidden;
         }
 
         .hero::before {
@@ -115,9 +114,8 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff22" fill-opacity="1" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%23ffffff" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
             background-size: cover;
-            opacity: 0.1;
         }
 
         .hero-content {
@@ -129,17 +127,26 @@
         }
 
         .hero h1 {
-            font-size: clamp(2.5rem, 5vw, 4rem);
             color: white;
             margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease;
+            font-weight: 800;
+        }
+
+        .hero h1 .highlight {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .hero-subtitle {
             font-size: 1.5rem;
             color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
+            margin-bottom: 2.5rem;
             animation: fadeInUp 1s ease 0.2s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .hero-buttons {
@@ -152,19 +159,22 @@
 
         .btn-primary {
             background: white;
-            color: var(--primary);
+            color: var(--primary-dark);
             padding: 1rem 3rem;
             border-radius: 50px;
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
             display: inline-block;
+            border: 2px solid white;
         }
 
         .btn-primary:hover {
-            transform: translateY(-3px);
+            transform: translateY(-3px) scale(1.05);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            background: transparent;
+            color: white;
         }
 
         .btn-secondary {
@@ -175,7 +185,7 @@
             border-radius: 50px;
             text-decoration: none;
             font-size: 1.1rem;
-            font-weight: 600;
+            font-weight: 700;
             transition: all 0.3s ease;
             display: inline-block;
         }
@@ -183,24 +193,37 @@
         .btn-secondary:hover {
             background: white;
             color: var(--primary);
+            transform: translateY(-3px) scale(1.05);
         }
 
-        /* Features Section */
-        .features {
-            padding: 5rem 2rem;
-            background: var(--light);
-        }
-
+        /* Sections General */
         .container {
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .section-title {
             text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
+            font-size: 2.8rem;
+            margin-bottom: 4rem;
             color: var(--dark);
+            font-weight: 700;
+        }
+        .section-subtitle {
+            text-align: center;
+            font-size: 1.3rem;
+            color: var(--gray);
+            margin-top: -3rem;
+            margin-bottom: 4rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        /* Features Section */
+        .features {
+            padding: 6rem 2rem;
+            background: var(--light);
         }
 
         .features-grid {
@@ -211,28 +234,22 @@
 
         .feature-card {
             background: white;
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
             transition: all 0.3s ease;
             text-align: center;
         }
 
         .feature-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
         }
 
         .feature-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-size: 2rem;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
         }
 
         .feature-card h3 {
@@ -246,10 +263,55 @@
             line-height: 1.8;
         }
 
+        /* HOW IT WORKS SECTION */
+        .how-it-works {
+            padding: 6rem 2rem;
+            background: white;
+        }
+
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            position: relative;
+        }
+
+        .step-card {
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+
+        .step-number {
+            display: inline-flex;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 20px rgba(71, 204, 2, 0.3);
+        }
+
+        .step-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+
+        .step-card p {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
         /* Stats Section */
         .stats {
             padding: 5rem 2rem;
-            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            background: var(--dark);
             color: white;
         }
 
@@ -261,8 +323,12 @@
         }
 
         .stat-item h3 {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
 
         .stat-item p {
@@ -272,21 +338,25 @@
 
         /* CTA Section */
         .cta {
-            padding: 5rem 2rem;
-            background: var(--dark);
+            padding: 6rem 2rem;
+            background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1579952363873-27f3bade9f55?q=80&w=2940&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
             text-align: center;
         }
 
         .cta h2 {
-            font-size: 2.5rem;
+            font-size: 3rem;
             color: white;
             margin-bottom: 1.5rem;
+            font-weight: 800;
         }
 
         .cta p {
-            font-size: 1.2rem;
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 2rem;
+            font-size: 1.3rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
@@ -295,48 +365,10 @@
         /* Footer */
         footer {
             background: var(--dark);
-            color: white;
-            padding: 3rem 2rem 1rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .footer-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-section h4 {
-            margin-bottom: 1rem;
-            color: var(--primary);
-        }
-
-        .footer-section ul {
-            list-style: none;
-        }
-
-        .footer-section ul li {
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-section a {
-            color: rgba(255, 255, 255, 0.7);
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
-
-        .footer-section a:hover {
-            color: var(--primary);
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: rgba(255, 255, 255, 0.5);
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
         /* Animations */
@@ -354,7 +386,7 @@
         .animate-on-scroll {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.6s ease;
+            transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
         .animate-on-scroll.visible {
@@ -368,188 +400,180 @@
             background: none;
             border: none;
             color: white;
-            font-size: 1.5rem;
+            font-size: 2rem;
             cursor: pointer;
+            z-index: 1001;
+        }
+
+        .nav-links.active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: var(--dark);
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
+            font-size: 1.5rem;
         }
 
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
             }
-
             .nav-btn {
                 display: none;
             }
-
             .mobile-menu {
                 display: block;
             }
-
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
             }
-
             .hero-subtitle {
                 font-size: 1.2rem;
             }
-
             .hero-buttons {
                 flex-direction: column;
                 align-items: center;
             }
-
             .btn-primary, .btn-secondary {
                 width: 100%;
                 max-width: 300px;
+                padding-top: 1.2rem;
+                padding-bottom: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
     <nav id="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
-                🎯 <span>PrimeBets</span>
+                <img src="images/primebets.jpeg" alt="Logo PrimeBets">
             </a>
             <ul class="nav-links">
-                <li><a href="#features">Funkcje</a></li>
-                <li><a href="#stats">Statystyki</a></li>
-                <li><a href="#about">O nas</a></li>
-                <li><a href="#contact">Kontakt</a></li>
+                <li><a href="#features">Korzyści</a></li>
+                <li><a href="#how-it-works">Jak to działa?</a></li>
+                <li><a href="#stats">Społeczność</a></li>
             </ul>
-            <a href="#" class="nav-btn">Rozpocznij teraz</a>
-            <button class="mobile-menu">☰</button>
+            <a href="#cta" class="nav-btn">Dołącz do Grupy</a>
+            <button class="mobile-menu" aria-label="Menu">☰</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h1>Witaj w PrimeBets</h1>
-            <p class="hero-subtitle">Najlepsze zakłady sportowe online z bonusem powitalnym 1000 PLN!</p>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2;">
+                <span style="display: block; font-size: 0.7em; font-weight: 500; color: rgba(255,255,255,0.8);">BEZPŁATNY DOSTĘP NA 30 DNI</span>
+                DO <span class="highlight">EKSKLUZYWNEJ GRUPY VIP</span>
+            </h1>
+            <p class="hero-subtitle">Dołącz do elity analityków i uzyskaj dostęp do ekskluzywnych prognoz i narzędzi, które pomogą Ci wejść na wyższy poziom.</p>
             <div class="hero-buttons">
-                <a href="#" class="btn-primary">Zarejestruj się teraz</a>
-                <a href="#" class="btn-secondary">Zobacz ofertę</a>
+                <a href="#cta" class="btn-primary">ODBIERZ DARMOWY DOSTĘP</a>
+                <a href="#features" class="btn-secondary">Dowiedz się Więcej</a>
             </div>
         </div>
     </section>
 
-    <!-- Features Section -->
+
+    <section style="background: var(--dark); padding: 4rem 2rem; text-align: center;">
+            <div class="container">
+                <p style="color: rgba(255, 255, 255, 0.7); font-weight: 500; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; margin-bottom: 2.5rem;">
+                     Współpraca, która przynosi korzyści
+                </p>
+                <div class="partners-logos">
+                    <img src="images/bets.png" alt="Logotypy naszych partnerów" style="max-width: 100%; height: auto; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);">
+                </div>
+            </div>
+        </section>
+
+
+
+
     <section class="features" id="features">
         <div class="container">
-            <h2 class="section-title animate-on-scroll">Dlaczego PrimeBets?</h2>
+            <h2 class="section-title animate-on-scroll">Co Zyskujesz w Grupie VIP?</h2>
             <div class="features-grid">
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">⚡</div>
-                    <h3>Błyskawiczne wypłaty</h3>
-                    <p>Wypłaty w ciągu 24 godzin. Gwarantujemy szybkie i bezpieczne transfery na Twoje konto.</p>
+                    <h3>Błyskawiczne Analizy</h3>
+                    <p>Otrzymujesz gotowe prognozy prosto na swoje konto. Bez opóźnień, bez czekania.</p>
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">📱</div>
-                    <h3>Aplikacja mobilna</h3>
-                    <p>Obstawiaj zakłady gdziekolwiek jesteś. Nasza aplikacja działa na iOS i Android.</p>
+                    <h3>Dostęp Mobilny 24/7</h3>
+                    <p>Pełen dostęp do panelu VIP w naszej apce. Twoje centrum dowodzenia w kieszeni.</p>
                 </div>
                 <div class="feature-card animate-on-scroll">
                     <div class="feature-icon">🎁</div>
-                    <h3>Bonusy i promocje</h3>
-                    <p>Bonus powitalny 100% do 1000 PLN oraz cotygodniowe promocje dla stałych graczy.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">📺</div>
-                    <h3>Transmisje na żywo</h3>
-                    <p>Oglądaj mecze na żywo bezpośrednio na naszej platformie. Ponad 100,000 wydarzeń rocznie.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">🔒</div>
-                    <h3>Bezpieczeństwo</h3>
-                    <p>Licencjonowany operator z szyfrowaniem SSL. Twoje dane i środki są w 100% bezpieczne.</p>
-                </div>
-                <div class="feature-card animate-on-scroll">
-                    <div class="feature-icon">💬</div>
-                    <h3>Wsparcie 24/7</h3>
-                    <p>Nasz zespół wsparcia jest dostępny całą dobę przez chat, email i telefon.</p>
+                    <h3>Oferty Partnerskie</h3>
+                    <p>Jako członek VIP masz dostęp do specjalnych pakietów i ofert u naszych zaufanych partnerów.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll">Twoja Przewaga w 3 Krokach</h2>
+            <p class="section-subtitle animate-on-scroll">Oszczędzamy Twój czas i maksymalizujemy Twój potencjał, dostarczając gotowe, eksperckie analizy prosto na Twoje konto.</p>
+            <div class="steps-grid">
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">1</div>
+                    <h3>Analiza AI i Eksperci</h3>
+                    <p>Nasz elitarny zespół, wspierany przez AI, codziennie przetwarza tysiące danych, identyfikując sygnały, które inni przegapiają.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">2</div>
+                    <h3>Codzienne Prognozy</h3>
+                    <p>Każdego dnia otrzymujesz do 5 starannie wyselekcjonowanych analiz z kluczowymi wnioskami i rekomendowanym działaniem.</p>
+                </div>
+                <div class="step-card animate-on-scroll">
+                    <div class="step-number">3</div>
+                    <h3>Gotowy Plan Działania</h3>
+                    <p>Dostajesz przejrzyste informacje, które możesz od razu wykorzystać u naszych partnerów. Prosto, szybko i skutecznie.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section class="stats" id="stats">
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item animate-on-scroll">
                     <h3>100K+</h3>
-                    <p>Aktywnych użytkowników</p>
+                    <p>Członków Społeczności</p>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <h3>500+</h3>
-                    <p>Wydarzeń dziennie</p>
+                    <h3>87%</h3>
+                    <p>Skuteczność Analiz</p>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <h3>24h</h3>
-                    <p>Wypłaty</p>
+                    <h3><1h</h3>
+                    <p>Średni Czas Reakcji Wsparcia</p>
                 </div>
                 <div class="stat-item animate-on-scroll">
-                    <h3>4.8/5</h3>
-                    <p>Ocena użytkowników</p>
+                    <h3>4.9/5</h3>
+                    <p>Ocena w Grupie VIP</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="cta">
+    <section class="cta" id="cta">
         <div class="container">
-            <h2 class="animate-on-scroll">Gotowy na wielkie wygrane?</h2>
-            <p class="animate-on-scroll">Dołącz do tysięcy zadowolonych graczy i odbierz bonus powitalny już dziś!</p>
-            <a href="#" class="btn-primary animate-on-scroll">Załóż konto za darmo</a>
+            <h2 class="animate-on-scroll">Gotów, by Wejść na Wyższy Poziom?</h2>
+            <p class="animate-on-scroll">Dołącz do społeczności, gdzie liczy się wiedza, a nie przypadek. Odbierz swoje darmowe 30 dni w elicie.</p>
+            <a href="#" class="btn-primary animate-on-scroll" style="background: var(--primary); color: white; border-color: var(--primary);">ODBIERZ DOSTĘP VIP TERAZ</a>
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h4>O PrimeBets</h4>
-                <ul>
-                    <li><a href="#">O nas</a></li>
-                    <li><a href="#">Kariera</a></li>
-                    <li><a href="#">Partnerzy</a></li>
-                    <li><a href="#">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Pomoc</h4>
-                <ul>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Kontakt</a></li>
-                    <li><a href="#">Wsparcie</a></li>
-                    <li><a href="#">Regulamin</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Zakłady</h4>
-                <ul>
-                    <li><a href="#">Piłka nożna</a></li>
-                    <li><a href="#">Koszykówka</a></li>
-                    <li><a href="#">Tenis</a></li>
-                    <li><a href="#">E-sport</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Odpowiedzialna gra</h4>
-                <ul>
-                    <li><a href="#">Zasady odpowiedzialnej gry</a></li>
-                    <li><a href="#">Samowykluczenie</a></li>
-                    <li><a href="#">Limity depozytów</a></li>
-                    <li><a href="#">18+</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 PrimeBets. Wszystkie prawa zastrzeżone. | Graj odpowiedzialnie 18+</p>
-        </div>
+        <p>&copy; 2025 PrimeBets. Wszelkie prawa zastrzeżone. | Usługa analityczna przeznaczona dla osób pełnoletnich (18+).</p>
     </footer>
 
     <script>
@@ -567,54 +591,38 @@
             });
         });
 
-        // Navbar background on scroll
-        window.addEventListener('scroll', function() {
-            const navbar = document.getElementById('navbar');
-            if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(15, 23, 42, 0.98)';
-            } else {
-                navbar.style.background = 'rgba(15, 23, 42, 0.95)';
-            }
-        });
-
         // Animation on scroll
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver(function(entries) {
+        const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1 });
 
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
 
         // Mobile menu toggle
-        document.querySelector('.mobile-menu').addEventListener('click', function() {
-            const navLinks = document.querySelector('.nav-links');
-            if (navLinks.style.display === 'flex') {
-                navLinks.style.display = 'none';
-            } else {
-                navLinks.style.display = 'flex';
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.position = 'absolute';
-                navLinks.style.top = '100%';
-                navLinks.style.left = '0';
-                navLinks.style.right = '0';
-                navLinks.style.background = 'rgba(15, 23, 42, 0.98)';
-                navLinks.style.padding = '1rem';
-            }
+        const mobileMenuButton = document.querySelector('.mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenuButton.addEventListener('click', function() {
+            navLinks.classList.toggle('active');
+        });
+
+        // Close mobile menu when a link is clicked
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                if (navLinks.classList.contains('active')) {
+                    navLinks.classList.remove('active');
+                }
+            });
         });
 
         // Console message
-        console.log('PrimeBets - Professional Landing Page Loaded!');
-        console.log('Ready for deployment on Vercel 🚀');
+        console.log('Arbiter Reklam was here. Konwersja zoptymalizowana. 🚀');
     </script>
 </body>
 </html>
