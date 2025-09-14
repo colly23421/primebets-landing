@@ -31,6 +31,21 @@
             background-color: var(--light);
         }
 
+        /* Logo Section */
+        .logo-section {
+            position: absolute;
+            top: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1000;
+        }
+
+        .logo-section img {
+            height: 80px;
+            width: auto;
+            filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+        }
+
         /* Hero Section */
         .hero {
             min-height: 100vh;
@@ -60,6 +75,7 @@
             text-align: center;
             position: relative;
             z-index: 1;
+            padding-top: 4rem;
         }
 
         .hero h1 {
@@ -137,7 +153,7 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        
+
         .section-title {
             text-align: center;
             font-size: 2.8rem;
@@ -145,7 +161,7 @@
             color: var(--dark);
             font-weight: 700;
         }
-        
+
         .section-subtitle {
             text-align: center;
             font-size: 1.3rem;
@@ -333,6 +349,9 @@
 
         /* Mobile Responsive */
         @media (max-width: 768px) {
+            .logo-section img {
+                height: 60px;
+            }
             .hero h1 {
                 font-size: 2.5rem;
             }
@@ -354,6 +373,9 @@
 </head>
 <body>
     <section class="hero">
+        <div class="logo-section">
+            <img src="images/primebets.jpeg" alt="PrimeBets Logo">
+        </div>
         <div class="hero-content">
             <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2;">
                 <span style="display: block; font-size: 0.7em; font-weight: 500; color: rgba(255,255,255,0.8);">BEZPŁATNY DOSTĘP NA 30 DNI</span>
@@ -459,8 +481,7 @@
     <footer>
         <p>&copy; 2025 PrimeBets. Wszelkie prawa zastrzeżone. | Usługa analityczna przeznaczona dla osób pełnoletnich (18+).</p>
     </footer>
-echo "" >> index.html
-echo "<!-- Forced rebuild $(date +%Y%m%d-%H%M%S) -->" >> index.html
+
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -488,8 +509,6 @@ echo "<!-- Forced rebuild $(date +%Y%m%d-%H%M%S) -->" >> index.html
         document.querySelectorAll('.animate-on-scroll').forEach(el => {
             observer.observe(el);
         });
-
-       
     </script>
 </body>
 </html>
