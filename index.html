@@ -43,6 +43,10 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        nav.scrolled {
+            padding: 0.5rem 0;
+        }
+
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -56,11 +60,20 @@
             text-decoration: none;
             display: flex;
             align-items: center;
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .logo img {
             height: 120px;
             width: auto;
+            transition: all 0.3s ease;
+        }
+
+        nav.scrolled .logo img {
+            height: 0;
+            opacity: 0;
+            margin: 0;
         }
 
         .nav-links {
@@ -619,6 +632,22 @@
                     navLinks.classList.remove('active');
                 }
             });
+        });
+
+        // Hide logo on scroll
+        const navbar = document.getElementById('navbar');
+        let lastScrollTop = 0;
+
+        window.addEventListener('scroll', function() {
+            let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            
+            lastScrollTop = scrollTop;
         });
 
         // Console message
