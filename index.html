@@ -459,7 +459,8 @@
     <footer>
         <p>&copy; 2025 PrimeBets. Wszelkie prawa zastrzeżone. | Usługa analityczna przeznaczona dla osób pełnoletnich (18+).</p>
     </footer>
-
+echo "" >> index.html
+echo "<!-- Forced rebuild $(date +%Y%m%d-%H%M%S) -->" >> index.html
     <script>
         // Smooth scrolling
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
