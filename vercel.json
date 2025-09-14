@@ -1,5 +1,7 @@
 {
   "version": 2,
   "name": "primebets-landing",  
-  "regions": ["waw1"]
+  "regions": ["waw1"],
+  "buildCommand": "next build",
+  "devCommand": "next dev"
 }
