@@ -1,0 +1,8 @@
+{
+  "name": "primebets-landing",
+  "version": "1.0.0",
+  "description": "PrimeBets Landing Page",
+  "scripts": {
+    "build": "echo No build needed"
+  }
+}
