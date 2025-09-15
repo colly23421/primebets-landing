@@ -1,8 +1,6 @@
 {
-  "version": 2,
-  "name": "primebets-landing",
-  "regions": ["fra1"],
-  "buildCommand": "npm run build",
-  "outputDirectory": "dist",
-  "installCommand": "npm install"
+  "buildCommand": "",
+  "outputDirectory": ".",
+  "framework": null,
+  "public": true
 }
