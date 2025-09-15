@@ -31,6 +31,26 @@
             background-color: var(--light);
         }
 
+        .logo {
+    width: 120px;  /* zwiększ z obecnych ~80px */
+    height: 120px;
+    margin-bottom: 40px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
+}
+
+.logo {
+    animation: logoFloat 3s ease-in-out infinite;
+}
+
+@keyframes logoFloat {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
         /* Logo Section */
         .logo-section {
             position: absolute;
