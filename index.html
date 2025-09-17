@@ -6,6 +6,10 @@
     <title>PrimeBets - Dostęp do grupy VIP analityków sportowych</title>
     <meta name="description" content="Zdobądź bezpłatny dostęp na 30 dni do ekskluzywnej grupy VIP analityków sportowych. Odbierz dostęp do prognoz i narzędzi, które pomogą Ci wejść na wyższy poziom.">
 
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="images/Favicon Transparent.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="images/Favicon Transparent.ico">
+
     <style>
         * {
             margin: 0;
@@ -32,24 +36,21 @@
         }
 
         .logo {
-    width: 120px;  /* zwiększ z obecnych ~80px */
-    height: 120px;
-    margin-bottom: 40px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 20px;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
-}
+            width: 120px;
+            height: 120px;
+            margin-bottom: 40px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0, 255, 0, 0.1);
+            animation: logoFloat 3s ease-in-out infinite;
+        }
 
-.logo {
-    animation: logoFloat 3s ease-in-out infinite;
-}
-
-@keyframes logoFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
+        @keyframes logoFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
 
         /* Logo Section */
         .logo-section {
@@ -61,7 +62,7 @@
         }
 
         .logo-section img {
-            height: 80px;
+            height: 160px;
             width: auto;
             filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
         }
@@ -370,7 +371,7 @@
         /* Mobile Responsive */
         @media (max-width: 768px) {
             .logo-section img {
-                height: 60px;
+                height: 120px;
             }
             .hero h1 {
                 font-size: 2.5rem;
@@ -394,7 +395,7 @@
 <body>
     <section class="hero">
         <div class="logo-section">
-            <img src="images/primebets.jpeg" alt="PrimeBets Logo">
+            <img src="images/Transparent Logo.png" alt="PrimeBets Logo">
         </div>
         <div class="hero-content">
             <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2;">
@@ -450,7 +451,7 @@
             <div class="steps-grid">
                 <div class="step-card animate-on-scroll">
                     <div class="step-number">1</div>
-                    <h3>Analiza ai i eksperci</h3>
+                    <h3>Analiza AI i eksperci</h3>
                     <p>Nasz elitarny zespół, wspierany przez AI, codziennie przetwarza tysiące danych, identyfikując sygnały, które inni przegapiają.</p>
                 </div>
                 <div class="step-card animate-on-scroll">
