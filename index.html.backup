@@ -1,14 +1,6 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-CBH4SZF5Q8"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag("js", new Date());
-        gtag("config", "G-CBH4SZF5Q8");
-    </script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimeBets - Dostęp do grupy VIP analityków sportowych</title>
@@ -109,7 +101,7 @@
 
         .hero h1 {
             color: white;
-            margin-bottom: 2.5rem;
+            margin-bottom: 1.5rem;
             animation: fadeInUp 1s ease;
             font-weight: 800;
         }
@@ -120,13 +112,22 @@
             -webkit-text-fill-color: transparent;
         }
 
+        .hero-subtitle {
+            font-size: 1.5rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.2s both;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
         .hero-buttons {
             display: flex;
             gap: 1rem;
             justify-content: center;
             flex-wrap: wrap;
             animation: fadeInUp 1s ease 0.4s both;
-            align-items: center;
         }
 
         .btn-primary {
@@ -138,15 +139,8 @@
             font-size: 1.1rem;
             font-weight: 700;
             transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.8rem;
+            display: inline-block;
             border: 2px solid white;
-        }
-
-        .btn-primary img {
-            width: 24px;
-            height: 24px;
         }
 
         .btn-primary:hover {
@@ -154,10 +148,6 @@
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
             background: transparent;
             color: white;
-        }
-
-        .btn-primary:hover img {
-            filter: brightness(0) invert(1);
         }
 
         .btn-secondary {
@@ -346,17 +336,6 @@
             margin-right: auto;
         }
 
-        .cta .btn-primary {
-            background: var(--primary);
-            color: white;
-            border-color: var(--primary);
-        }
-
-        .cta .btn-primary:hover {
-            background: transparent;
-            border-color: white;
-        }
-
         /* Footer */
         footer {
             background: var(--dark);
@@ -395,7 +374,10 @@
                 height: 120px;
             }
             .hero h1 {
-                font-size: 2rem;
+                font-size: 2.5rem;
+            }
+            .hero-subtitle {
+                font-size: 1.2rem;
             }
             .hero-buttons {
                 flex-direction: column;
@@ -409,32 +391,20 @@
             }
         }
     </style>
-    <!-- Google Tag Manager -->
-    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-NMVV2B4K');</script>
-    <!-- End Google Tag Manager -->
 </head>
 <body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NMVV2B4K"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-    <!-- End Google Tag Manager (noscript) -->
     <section class="hero">
         <div class="logo-section">
             <img src="images/Transparent Logo.png" alt="PrimeBets Logo">
         </div>
         <div class="hero-content">
-          <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2;">
-              Odbierz darmowy dostęp do naszej <span class="highlight">Strefy VIP z analizami sportowymi</span>
+            <h1 style="font-size: clamp(2.5rem, 5vw, 4rem); line-height: 1.2;">
+                <span style="display: block; font-size: 0.7em; font-weight: 500; color: rgba(255,255,255,0.8);">Bezpłatny dostęp na 30 dni</span>
+                do <span class="highlight">ekskluzywnej grupy VIP</span>
             </h1>
+            <p class="hero-subtitle">Dołącz do elity analityków i uzyskaj dostęp do ekskluzywnych prognoz i narzędzi, które pomogą ci wejść na wyższy poziom.</p>
             <div class="hero-buttons">
-                <a href="https://t.me/twoj_kanal_telegram" target="_blank" rel="noopener noreferrer" class="btn-primary">
-                    <img src="images/telegram-seeklogo.png" alt="Telegram">
-                    Odbieram darmowy dostęp
-                </a>
+                <a href="#cta" class="btn-primary">Odbierz darmowy dostęp</a>
                 <a href="#features" class="btn-secondary">Dowiedz się więcej</a>
             </div>
         </div>
@@ -502,6 +472,10 @@
         <div class="container">
             <div class="stats-grid">
                 <div class="stat-item animate-on-scroll">
+                    <h3>100K+</h3>
+                    <p>Członków społeczności</p>
+                </div>
+                <div class="stat-item animate-on-scroll">
                     <h3>87%</h3>
                     <p>Skuteczność analiz</p>
                 </div>
@@ -521,10 +495,7 @@
         <div class="container">
             <h2 class="animate-on-scroll">Gotów, by wejść na wyższy poziom?</h2>
             <p class="animate-on-scroll">Dołącz do społeczności, gdzie liczy się wiedza, a nie przypadek. Odbierz swoje darmowe 30 dni w elicie.</p>
-            <a href="https://t.me/twoj_kanal_telegram" target="_blank" rel="noopener noreferrer" class="btn-primary animate-on-scroll">
-                <img src="images/telegram-seeklogo.png" alt="Telegram">
-                Odbieram darmowy dostęp
-            </a>
+            <a href="#" class="btn-primary animate-on-scroll" style="background: var(--primary); color: white; border-color: var(--primary);">Odbierz dostęp VIP teraz</a>
         </div>
     </section>
 
