@@ -9,6 +9,27 @@
         gtag("js", new Date());
         gtag("config", "G-CBH4SZF5Q8");
     </script>
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window,document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+
+    fbq('init', 'TWÓJ_PIXEL_ID'); // Zastąp swoim Pixel ID
+    fbq('track', 'PageView');
+    </script>
+    <noscript>
+    <img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=TWÓJ_PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PrimeBets - Dostęp do grupy VIP analityków sportowych</title>
@@ -443,7 +464,9 @@
               Odbierz darmowy dostęp do naszej <span class="highlight">Strefy VIP z analizami sportowymi</span>
             </h1>
             <div class="hero-buttons">
-                <a href="https://t.me/Primebets_pl" target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <!-- PIERWSZY PRZYCISK (w hero section) -->
+                <a href="https://t.me/Primebets_pl" target="_blank" rel="noopener noreferrer" class="btn-primary" 
+                   onclick="fbq('trackCustom', 'TelegramClick', {'button_location': 'hero', 'button_name': 'Odbieram darmowy dostęp'});">
                     <img src="images/telegram-seeklogo.png" alt="Telegram">
                     Odbieram darmowy dostęp
                 </a>
@@ -533,7 +556,9 @@
         <div class="container">
             <h2 class="animate-on-scroll">Gotów, by wejść na wyższy poziom?</h2>
             <p class="animate-on-scroll">Dołącz do społeczności, gdzie liczy się wiedza, a nie przypadek. Odbierz swoje darmowe 30 dni w elicie.</p>
-            <a href="https://t.me/Primebets_pl" target="_blank" rel="noopener noreferrer" class="btn-primary animate-on-scroll">
+            <!-- DRUGI PRZYCISK (w CTA section) -->
+            <a href="https://t.me/Primebets_pl" target="_blank" rel="noopener noreferrer" class="btn-primary animate-on-scroll"
+               onclick="fbq('trackCustom', 'TelegramClick', {'button_location': 'cta', 'button_name': 'Odbieram darmowy dostęp'});">
                 <img src="images/telegram-seeklogo.png" alt="Telegram">
                 Odbieram darmowy dostęp
             </a>
